@@ -1,4 +1,4 @@
-import 'package:order/screens/aurhenticate/authenticate.dart';
+import 'package:order/screens/authenticate/authenticate.dart';
 import 'package:order/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
