@@ -1,6 +1,7 @@
 import 'package:order/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:order/shared/constants.dart';
+import 'package:order/shared/loading.dart';
 
 class Register extends StatefulWidget {
 
@@ -15,20 +16,21 @@ class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
-  String error = '';
+  bool loading = false;
 
   // text field state
   String email = '';
   String password = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading(): Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign up to the App'),
+        title: Text('New to the App ?'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
@@ -69,10 +71,12 @@ class _RegisterState extends State<Register> {
                 ),
                 onPressed: () async {
                   if(_formKey.currentState.validate()){
+                    setState(()=> loading = true);
                     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                     if(result == null) {
                       setState(() {
                         error = 'Please supply a valid email';
+                        loading = false;
                       });
                     }
                   }
