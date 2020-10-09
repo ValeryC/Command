@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "784800031118",
+    "firebase_url": "https://order-command.firebaseio.com",
+    "project_id": "order-command",
+    "storage_bucket": "order-command.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784800031118:android:5ee14c9cc2fbcc55b084df",
+        "android_client_info": {
+          "package_name": "com.command.order"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784800031118-j0j31b43l9o4pokhf6f0e8cqnfk4u1ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYf_HuvOPQTrgFNAWMeecDcK88pwFAvnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784800031118-j0j31b43l9o4pokhf6f0e8cqnfk4u1ue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
